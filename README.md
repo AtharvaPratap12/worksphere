@@ -1,59 +1,123 @@
-# EmployeeManagementPortal
+# WorkSphere
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.3.
+## Employee & Recruitment Management Portal
 
-## Development server
+WorkSphere is a modern Employee and Recruitment Management Portal built with Angular. It provides a centralized interface for managing employees, recruitment candidates, departments, notifications, application preferences, and workforce statistics.
 
-To start a local development server, run:
+The application uses a clean dashboard-driven interface with responsive layouts and light/dark theme support.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Features
 
-## Code scaffolding
+### Dashboard
+- Total employee count
+- Active employee count
+- Department count
+- New hire statistics
+- Employee distribution by department
+- Employee status overview
+- Recently added employee information
+- Real-time dashboard updates based on stored employee data
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Employee Management
+- Add employees
+- Edit employee information
+- View employee details
+- Delete employees
+- Search employees by name or email
+- Filter employees by department
+- Employee status management
+- Persistent employee data using browser LocalStorage
 
-```bash
-ng generate component component-name
-```
+### Recruitment Management
+- Add candidates
+- Delete candidates
+- Search candidates by name, email, or position
+- Filter candidates by recruitment status
+- Recruitment statistics
+- Candidate experience tracking
+- Candidate application dates
+- Recruitment pipeline statuses
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Notifications
+- Employee activity notifications
+- Recruitment activity notifications
+- Real-time unread notification count
+- Mark all notifications as read
+- Notification persistence using LocalStorage
+- Enable/disable notifications from Settings
 
-```bash
-ng generate --help
-```
+### Settings
+- Light/Dark mode
+- Notification preferences
+- Local data management
+- Administrator information
+- Application information
 
-## Building
+### UI & UX
+- Responsive design
+- Mobile-friendly layouts
+- Bootstrap-based components
+- Bootstrap Icons
+- Interactive modals
+- Hover and focus states
+- Consistent light and dark themes
 
-To build the project run:
+### Authentication
+- Login page
+- Protected application routes
+- Authentication guard
+- Logout functionality
+- Demo administrator account
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Tech Stack
 
-## Running unit tests
+- **Angular 22**
+- **TypeScript**
+- **HTML5**
+- **CSS3**
+- **Bootstrap**
+- **Bootstrap Icons**
+- **Reactive Forms**
+- **Template-driven Forms**
+- **Angular Router**
+- **RxJS**
+- **Browser LocalStorage**
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## Project Structure
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```text
+src/
+└── app/
+    ├── authguard/
+    │   └── auth.guard.ts
+    │
+    ├── layout/
+    │   ├── layout.html
+    │   ├── layout.css
+    │   └── layout.ts
+    │
+    ├── models/
+    │   ├── employee.ts
+    │   └── candidate.ts
+    │
+    ├── pages/
+    │   ├── dashboard/
+    │   ├── employees/
+    │   ├── add-employee/
+    │   ├── recruitment/
+    │   ├── departments/
+    │   ├── setting/
+    │   └── login/
+    │
+    └── services/
+        ├── auth.ts
+        ├── employee.ts
+        ├── candidate.ts
+        ├── notification.ts
+        └── theme.ts
