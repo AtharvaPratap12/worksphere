@@ -39,7 +39,7 @@ jobs:
         run: npx ng build --configuration production --base-href /worksphere/
 
       - name: Prepare SPA fallback
-        run: cp dist/employee-management-portal/browser/index.html dist/employee-management-portal/404.html
+        run: cp dist/employee-management-portal/browser/index.html dist/employee-management-portal/browser/404.html
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
@@ -47,7 +47,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist/employee-management-portal
+          path: dist/employee-management-portal/browser
 
   deploy:
     runs-on: ubuntu-latest
