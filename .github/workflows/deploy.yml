@@ -39,7 +39,7 @@ jobs:
         run: npx ng build --configuration production --base-href /worksphere/
 
       - name: Prepare SPA fallback
-        run: cp dist/employee-management-portal/index.html dist/employee-management-portal/404.html
+        run: cp dist/employee-management-portal/browser/index.html dist/employee-management-portal/404.html
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
