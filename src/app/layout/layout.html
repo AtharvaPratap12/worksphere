@@ -1,0 +1,409 @@
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <!-- Logo -->
+    <div class="sidebar-header">
+      <div class="logo-icon">
+        <i class="bi bi-briefcase-fill"></i>
+      </div>
+
+      <span class="logo-text">WorkSphere</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+
+      <p class="nav-title">MAIN MENU</p>
+
+      <a routerLink="/dashboard"
+         routerLinkActive="active"
+         class="nav-link">
+
+        <i class="bi bi-grid-1x2-fill"></i>
+        <span>Dashboard</span>
+
+      </a>
+
+      <a routerLink="/employees"
+         routerLinkActive="active"
+         class="nav-link">
+
+        <i class="bi bi-people-fill"></i>
+        <span>Employees</span>
+
+      </a>
+
+      <a routerLink="/recruitment"
+         routerLinkActive="active"
+         class="nav-link">
+
+        <i class="bi bi-person-badge-fill"></i>
+        <span>Recruitment</span>
+
+      </a>
+
+      <p class="nav-title mt-4">MANAGEMENT</p>
+
+      <a
+  routerLink="/department"
+  routerLinkActive="active"
+  class="nav-link"
+>
+  <i class="bi bi-building"></i>
+  <span>Departments</span>
+</a>
+
+      <a 
+      routerLink="/settings"
+      routerLinkActive = '"active'
+      class="nav-link">
+
+        <i class="bi bi-gear-fill"></i>
+        <span>Settings</span>
+
+      </a>
+
+    </nav>
+
+    <!-- Bottom -->
+            <button
+          type="button"
+          class="nav-link w-100 border-0 bg-transparent"
+          (click)="logout()"
+        >
+
+          <i class="bi bi-box-arrow-right"></i>
+
+          <span>Logout</span>
+
+        </button>
+
+  </aside>
+
+
+  <!-- Main Area -->
+  <div class="main-area">
+
+    <!-- Navbar -->
+    <header class="top-navbar"
+    [class.dark-navbar]="isDarkMode">
+
+      <div>
+        <h5 class="mb-0 fw-bold">WorkSphere</h5>
+        <small class="text-muted">
+          Manage your workforce efficiently
+        </small>
+      </div>
+
+
+      <div class="d-flex align-items-center gap-3">
+
+  <!-- Theme Toggle -->
+
+  <button
+    type="button"
+    class="icon-button"
+    (click)="toggleTheme()"
+    [title]="
+      isDarkMode
+        ? 'Switch to light mode'
+        : 'Switch to dark mode'
+    "
+  >
+
+    <i
+      [class]="
+        isDarkMode
+          ? 'bi bi-sun-fill'
+          : 'bi bi-moon-fill'
+      "
+    ></i>
+
+  </button>
+
+
+  <!-- Notifications -->
+
+  <div class="navbar-dropdown">
+
+    <button
+      type="button"
+      class="icon-button notification-button"
+      (click)="toggleNotifications()"
+    >
+
+      <i class="bi bi-bell"></i>
+
+      @if (unreadNotifications > 0) {
+
+      <span class="notification-dot"></span>
+
+      <span class="notification-count" >
+        {{ unreadNotifications }}
+      </span>
+
+      }
+
+    </button>
+
+
+    @if (showNotifications) {
+
+  <div class="dropdown-panel notification-panel">
+
+    <div class="dropdown-header">
+
+      <div>
+
+        <h6 class="fw-bold mb-1">
+          Notifications
+        </h6>
+
+        <small class="text-muted">
+          Recent activity
+        </small>
+
+      </div>
+
+      @if (unreadNotifications > 0) {
+
+        <span class="badge text-bg-primary">
+          {{ unreadNotifications }}
+        </span>
+
+      }
+
+    </div>
+
+
+    @if (notifications.length > 0) {
+
+      @for (
+        notification of notifications;
+        track notification.id
+      ) {
+
+        <div
+          class="notification-item"
+          [class.unread]="!notification.read"
+        >
+
+          <div
+            class="notification-icon"
+            [class.employee-notification]="notification.type === 'employee'"
+            [class.interview-notification]="notification.type === 'candidate'"
+            [class.success-notification]="notification.type === 'success'"
+          >
+
+            <i
+              [class]="
+                notification.type === 'employee'
+                ? 'bi bi-person-plus-fill'
+                : notification.type === 'candidate'
+                ? 'bi bi-person-badge-fill'
+                : 'bi bi-check-circle-fill'
+              "
+            ></i>
+
+
+          </div>
+
+
+          <div class="notification-content">
+
+            <div class="fw-semibold">
+              {{ notification.title }}
+            </div>
+
+            <small class="text-muted">
+              {{ notification.message }}
+            </small>
+
+            <small class="notification-time">
+              {{ notification.createdAt | date:'short' }}
+            </small>
+
+          </div>
+
+        </div>
+
+      }
+
+    }
+    @else {
+
+      <div class="empty-notifications">
+
+        <i class="bi bi-bell-slash"></i>
+
+        <p class="mb-0">
+          No new notifications
+        </p>
+
+        <small class="text-muted">
+          Activity will appear here.
+        </small>
+
+      </div>
+
+    }
+
+
+    @if (unreadNotifications > 0) {
+
+      <div class="notification-footer">
+
+        <button
+          type="button"
+          class="btn btn-sm btn-link text-decoration-none"
+          (click)="markallNotificationsAsRead()"
+        >
+
+          Mark all as read
+
+        </button>
+
+      </div>
+
+    }
+
+  </div>
+
+}
+
+  </div>
+
+
+  <!-- Profile -->
+
+  <div class="navbar-dropdown">
+
+    <button
+      type="button"
+      class="profile profile-button"
+      (click)="toggleProfile()"
+    >
+
+      <div class="profile-avatar">
+        A
+      </div>
+
+      <div class="profile-info">
+
+        <span class="profile-name">
+          Atharva
+        </span>
+
+        <small>
+          Administrator
+        </small>
+
+      </div>
+
+      <i
+        class="bi bi-chevron-down profile-chevron"
+      ></i>
+
+    </button>
+
+
+    @if (showProfile) {
+
+      <div
+        class="dropdown-panel profile-panel"
+      >
+
+        <div class="profile-dropdown-header">
+
+          <div class="profile-avatar large-avatar">
+            A
+          </div>
+
+          <div>
+
+            <div class="fw-bold">
+              Atharva
+            </div>
+
+            <small class="text-muted">
+              admin@worksphere.com
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+
+        <a
+          routerLink="/dashboard"
+          class="dropdown-item-custom"
+          (click)="closeDropdowns()"
+        >
+
+          <i class="bi bi-person-circle"></i>
+
+          <span>
+            My Profile
+          </span>
+
+        </a>
+
+
+        <a
+          routerLink="/departments"
+          class="dropdown-item-custom"
+          (click)="closeDropdowns()"
+        >
+
+          <i class="bi bi-gear"></i>
+
+          <span>
+            Settings
+          </span>
+
+        </a>
+
+
+        <div class="dropdown-divider"></div>
+
+
+        <button
+          type="button"
+          class="dropdown-item-custom logout-item"
+          (click)="logout()"
+        >
+
+          <i class="bi bi-box-arrow-right"></i>
+
+          <span>
+            Logout
+          </span>
+
+        </button>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>
+
+    </header>
+
+
+    <!-- Page Content -->
+    <main class="content">
+
+      <router-outlet></router-outlet>
+
+    </main>
+
+  </div>
+
+</div>      

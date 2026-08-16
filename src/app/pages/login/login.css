@@ -1,0 +1,386 @@
+/* ========================================
+   WORKSPHERE LOGIN PAGE
+======================================== */
+
+.login-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #f5f7fb;
+  color: #111827;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* ========================================
+   LOGIN CARD
+======================================== */
+
+.login-card {
+  width: 100%;
+  max-width: 475px;
+
+  padding: 42px;
+
+  background: #ffffff;
+  color: #111827;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.login-logo {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #0d6efd;
+  color: #ffffff;
+
+  border-radius: 14px;
+
+  font-size: 28px;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.login-card h1,
+.login-card h2,
+.login-card h3,
+.login-card h4,
+.login-card h5,
+.login-card h6 {
+  color: #111827;
+}
+
+.login-card p {
+  color: #6b7280;
+}
+
+
+/* ========================================
+   FORM LABELS
+======================================== */
+
+.login-card label {
+  color: #374151;
+  font-weight: 500;
+}
+
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.login-card .form-control {
+  background-color: #ffffff;
+  color: #111827;
+
+  border-color: #d1d5db;
+}
+
+.login-card .form-control::placeholder {
+  color: #9ca3af;
+}
+
+.login-card .form-control:focus {
+  background-color: #ffffff;
+  color: #111827;
+
+  border-color: #0d6efd;
+
+  box-shadow:
+    0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+
+/* ========================================
+   PASSWORD TOGGLE
+======================================== */
+
+.login-card .input-group .btn {
+  background-color: #ffffff;
+  color: #6c757d;
+
+  border-color: #d1d5db;
+}
+
+.login-card .input-group .btn:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+
+  border-color: #d1d5db;
+}
+
+
+/* ========================================
+   LOGIN BUTTON
+======================================== */
+
+.login-card .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+
+  color: #ffffff;
+}
+
+.login-card .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   DEMO LOGIN BOX
+======================================== */
+
+.demo-box {
+  margin-top: 24px;
+
+  padding: 18px;
+
+  border-radius: 10px;
+
+  background: #f8f9fa;
+  color: #6b7280;
+}
+
+.demo-box strong,
+.demo-box b {
+  color: #374151;
+}
+
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.login-card .text-danger {
+  color: #dc3545 !important;
+}
+
+
+/* ========================================
+   DARK MODE
+   Theme service adds:
+   body.dark-mode
+======================================== */
+
+
+/* Page */
+
+:host-context(body.dark-mode) .login-page {
+  background: #111827;
+  color: #f9fafb;
+}
+
+
+/* Card */
+
+:host-context(body.dark-mode) .login-card {
+  background: #1f2937;
+  color: #f9fafb;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Title */
+
+:host-context(body.dark-mode) .login-card h1,
+:host-context(body.dark-mode) .login-card h2,
+:host-context(body.dark-mode) .login-card h3,
+:host-context(body.dark-mode) .login-card h4,
+:host-context(body.dark-mode) .login-card h5,
+:host-context(body.dark-mode) .login-card h6 {
+  color: #f9fafb;
+}
+
+
+/* Subtitle */
+
+:host-context(body.dark-mode) .login-card p {
+  color: #9ca3af;
+}
+
+
+/* Labels */
+
+:host-context(body.dark-mode) .login-card label {
+  color: #e5e7eb;
+}
+
+
+/* Inputs */
+
+:host-context(body.dark-mode) .login-card .form-control {
+  background-color: #111827;
+  color: #f9fafb;
+
+  border-color: #374151;
+}
+
+:host-context(body.dark-mode) .login-card .form-control::placeholder {
+  color: #6b7280;
+}
+
+
+/* Input focus */
+
+:host-context(body.dark-mode) .login-card .form-control:focus {
+  background-color: #111827;
+  color: #f9fafb;
+
+  border-color: #0d6efd;
+
+  box-shadow:
+    0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+
+/* ========================================
+   DARK MODE PASSWORD BUTTON
+======================================== */
+
+:host-context(body.dark-mode)
+.login-card
+.input-group
+.btn {
+  background-color: #1f2937 !important;
+
+  color: #d1d5db !important;
+
+  border-color: #374151 !important;
+}
+
+
+:host-context(body.dark-mode)
+.login-card
+.input-group
+.btn:hover {
+  background-color: #374151 !important;
+
+  color: #ffffff !important;
+
+  border-color: #4b5563 !important;
+}
+
+
+:host-context(body.dark-mode)
+.login-card
+.input-group
+.btn:focus {
+  background-color: #374151 !important;
+
+  color: #ffffff !important;
+
+  border-color: #0d6efd !important;
+
+  box-shadow: none !important;
+}
+
+
+:host-context(body.dark-mode)
+.login-card
+.input-group
+.btn:active {
+  background-color: #374151 !important;
+
+  color: #ffffff !important;
+
+  border-color: #0d6efd !important;
+}
+
+
+/* ========================================
+   DARK MODE LOGIN BUTTON
+======================================== */
+
+:host-context(body.dark-mode) .login-card .btn-primary {
+  background-color: #0d6efd;
+
+  border-color: #0d6efd;
+
+  color: #ffffff;
+}
+
+:host-context(body.dark-mode) .login-card .btn-primary:hover {
+  background-color: #0b5ed7;
+
+  border-color: #0a58ca;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   DARK MODE DEMO BOX
+======================================== */
+
+:host-context(body.dark-mode) .demo-box {
+  background: #111827;
+
+  color: #9ca3af;
+}
+
+:host-context(body.dark-mode) .demo-box strong,
+:host-context(body.dark-mode) .demo-box b {
+  color: #f9fafb;
+}
+
+
+/* ========================================
+   DARK MODE ERROR
+======================================== */
+
+:host-context(body.dark-mode) .login-card .text-danger {
+  color: #f87171 !important;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 576px) {
+
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 30px 22px;
+  }
+
+}

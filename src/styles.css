@@ -1,1 +1,822 @@
 /* You can add global styles to this file, and also import other style files */
+/* ========================================
+   WORKSPHERE DARK MODE
+======================================== */
+
+[data-theme="dark"] {
+
+  color-scheme: dark;
+
+  --ws-bg: #111827;
+  --ws-card: #1f2937;
+  --ws-navbar: #1f2937;
+  --ws-border: #374151;
+  --ws-text: #f9fafb;
+  --ws-muted: #9ca3af;
+  --ws-input: #111827;
+
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+[data-theme="dark"] body {
+
+  background: var(--ws-bg);
+
+  color: var(--ws-text);
+
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+[data-theme="dark"] .app-container {
+
+  background: var(--ws-bg);
+
+}
+
+
+[data-theme="dark"] .main-area {
+
+  background: var(--ws-bg);
+
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+[data-theme="dark"] .top-navbar {
+
+  background: var(--ws-navbar);
+
+  border-color: var(--ws-border);
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .top-navbar h5 {
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .top-navbar small {
+
+  color: var(--ws-muted) !important;
+
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+[data-theme="dark"] .card {
+
+  background: var(--ws-card);
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .card-body {
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .card h1,
+[data-theme="dark"] .card h2,
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .card h4,
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card h6 {
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .text-muted {
+
+  color: var(--ws-muted) !important;
+
+}
+
+
+/* ========================================
+   TABLES
+======================================== */
+
+[data-theme="dark"] .table {
+
+  --bs-table-bg: var(--ws-card);
+
+  --bs-table-color: var(--ws-text);
+
+  --bs-table-border-color: var(--ws-border);
+
+}
+
+
+[data-theme="dark"] .table thead th {
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+
+  --bs-table-hover-bg: #374151;
+
+  color: var(--ws-text);
+
+}
+
+
+/* ========================================
+   FORM CONTROLS
+======================================== */
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+
+  background-color: var(--ws-input);
+
+  border-color: var(--ws-border);
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .form-control::placeholder {
+
+  color: #6b7280;
+
+}
+
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+
+  background-color: var(--ws-input);
+
+  color: var(--ws-text);
+
+  border-color: #0d6efd;
+
+}
+
+
+/* ========================================
+   INPUT GROUP
+======================================== */
+
+[data-theme="dark"] .input-group-text {
+
+  background-color: var(--ws-card);
+
+  border-color: var(--ws-border);
+
+  color: var(--ws-muted);
+
+}
+
+
+/* ========================================
+   PROFILE
+======================================== */
+
+[data-theme="dark"] .profile-name {
+
+  color: var(--ws-text);
+
+}
+
+
+[data-theme="dark"] .profile-info small {
+
+  color: var(--ws-muted);
+
+}
+
+
+/* ========================================
+   ICON BUTTON
+======================================== */
+
+[data-theme="dark"] .icon-button {
+
+  color: var(--ws-text);
+
+}
+
+
+/* ========================================
+   PROGRESS BAR AREA
+======================================== */
+
+[data-theme="dark"] .progress {
+
+  background-color: #374151;
+
+}
+
+
+/* ========================================
+   BORDERS
+======================================== */
+
+[data-theme="dark"] .border-bottom {
+
+  border-color: var(--ws-border) !important;
+
+}
+
+
+/* ========================================
+   ALERT / DEMO BOX
+======================================== */
+
+[data-theme="dark"] .demo-box {
+
+  background: var(--ws-card);
+
+  color: var(--ws-text);
+
+}
+
+
+/* ========================================
+   LOGIN PAGE
+======================================== */
+
+[data-theme="dark"] .login-page {
+
+  background: var(--ws-bg);
+
+}
+
+
+[data-theme="dark"] .login-card {
+
+  background: var(--ws-card);
+
+  color: var(--ws-text);
+
+}
+
+
+/* ========================================
+   BUTTON OUTLINE
+======================================== */
+
+[data-theme="dark"] .btn-outline-secondary {
+
+  color: var(--ws-text);
+
+  border-color: var(--ws-border);
+
+}
+
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+
+  background-color: #374151;
+
+  color: white;
+
+}
+
+[data-theme="dark"] .employee-avatar {
+
+  background: #1e3a5f;
+
+  color: #60a5fa;
+
+}
+
+
+[data-theme="dark"] .candidate-avatar {
+
+  background: #143d2b;
+
+  color: #6ee7b7;
+
+}
+
+
+[data-theme="dark"] .department-icon {
+
+  background: #1e3a5f;
+
+  color: #60a5fa;
+
+}
+
+
+[data-theme="dark"] .status-row {
+
+  border-color: var(--ws-border);
+
+}
+
+
+[data-theme="dark"] .status-row span {
+
+  color: var(--ws-text);
+
+}
+
+body,
+.card,
+.top-navbar,
+.form-control,
+.form-select,
+.input-group-text,
+.table,
+.login-card {
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+
+}
+/* ========================================
+   WORKSPHERE LOGIN - DARK MODE OVERRIDE
+======================================== */
+
+html[data-theme="dark"] .login-page {
+  background: #111827 !important;
+  color: #f9fafb !important;
+}
+
+html[data-theme="dark"] .login-card {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+
+/* Heading */
+
+html[data-theme="dark"] .login-card h2 {
+  color: #f9fafb !important;
+}
+
+
+/* Subtitle */
+
+html[data-theme="dark"] .login-card .text-muted {
+  color: #9ca3af !important;
+}
+
+
+/* Labels */
+
+html[data-theme="dark"] .login-card .form-label {
+  color: #e5e7eb !important;
+}
+
+
+/* Inputs */
+
+html[data-theme="dark"] .login-card .form-control {
+  background-color: #111827 !important;
+  color: #f9fafb !important;
+  border-color: #374151 !important;
+}
+
+
+/* Placeholder */
+
+html[data-theme="dark"] .login-card .form-control::placeholder {
+  color: #6b7280 !important;
+}
+
+
+/* Password eye button */
+
+html[data-theme="dark"] .login-card .btn-outline-secondary {
+  background-color: #1f2937 !important;
+  color: #d1d5db !important;
+  border-color: #374151 !important;
+}
+
+
+/* Demo box */
+
+html[data-theme="dark"] .login-card .demo-box {
+  background-color: #111827 !important;
+  color: #9ca3af !important;
+}
+
+
+html[data-theme="dark"] .login-card .demo-box strong {
+  color: #f9fafb !important;
+}
+
+
+/* Error text */
+
+html[data-theme="dark"] .login-card .text-danger {
+  color: #f87171 !important;
+}
+
+/* =========================================
+   WORKSPHERE DARK MODE
+========================================= */
+
+html.dark-mode,
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+/* Main content area */
+.dark-mode .main-area,
+.dark-mode .content {
+  background-color: #0f172a !important;
+  color: #f8fafc;
+}
+
+/* Cards */
+.dark-mode .card {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+/* Card headings and normal text */
+.dark-mode .card h1,
+.dark-mode .card h2,
+.dark-mode .card h3,
+.dark-mode .card h4,
+.dark-mode .card h5,
+.dark-mode .card h6,
+.dark-mode .card p,
+.dark-mode .card span {
+  color: inherit;
+}
+
+/* Muted text */
+.dark-mode .text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Tables */
+.dark-mode .table {
+  --bs-table-bg: transparent;
+  --bs-table-color: #f8fafc;
+  --bs-table-border-color: #334155;
+}
+
+.dark-mode .table-hover > tbody > tr:hover > * {
+  --bs-table-hover-bg: #334155;
+  --bs-table-hover-color: #fff;
+}
+
+/* Progress background */
+.dark-mode .progress {
+  background-color: #334155 !important;
+}
+
+/* Form controls */
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+.dark-mode .input-group-text {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+/* =========================================================
+   WORKSPHERE - DARK MODE FIXES
+   ========================================================= */
+
+
+/* ---------- GENERAL ---------- */
+
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+body.dark-mode .text-muted {
+  color: #94a3b8 !important;
+}
+
+
+/* =========================================================
+   SETTINGS PAGE
+   ========================================================= */
+
+body.dark-mode .settings-card {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .settings-card-header {
+  border-color: #334155 !important;
+}
+
+body.dark-mode .settings-card h5,
+body.dark-mode .settings-card h6,
+body.dark-mode .settings-card .option-title {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .settings-card .option-description,
+body.dark-mode .settings-card p,
+body.dark-mode .settings-card span {
+  color: #94a3b8;
+}
+
+body.dark-mode .account-detail {
+  border-color: #334155 !important;
+}
+
+body.dark-mode .account-detail span {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .account-detail strong {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .about-content {
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   EMPLOYEE DETAILS MODAL
+   ========================================================= */
+
+body.dark-mode .employee-modal {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+body.dark-mode .employee-modal-header,
+body.dark-mode .employee-modal-footer {
+  border-color: #334155 !important;
+}
+
+body.dark-mode .employee-modal h4,
+body.dark-mode .employee-modal h5,
+body.dark-mode .employee-modal h6 {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .employee-modal p,
+body.dark-mode .employee-modal small {
+  color: #94a3b8 !important;
+}
+
+
+/* Modal information boxes */
+
+body.dark-mode .employee-modal .detail-card,
+body.dark-mode .employee-modal .info-card,
+body.dark-mode .employee-modal .employee-detail-item {
+  background: #273449 !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+
+/* Labels */
+
+body.dark-mode .employee-modal label,
+body.dark-mode .employee-modal .detail-label {
+  color: #94a3b8 !important;
+}
+
+
+/* Actual values */
+
+body.dark-mode .employee-modal .detail-value,
+body.dark-mode .employee-modal strong {
+  color: #f8fafc !important;
+}
+
+
+/* Close button */
+
+body.dark-mode .employee-modal .modal-close-button {
+  color: #cbd5e1 !important;
+}
+
+
+/* =========================================================
+   ADD CANDIDATE MODAL
+   ========================================================= */
+
+body.dark-mode .candidate-modal {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .candidate-modal-header {
+  border-color: #334155 !important;
+}
+
+body.dark-mode .candidate-modal-header h4 {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .candidate-modal-header p {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .candidate-modal label {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .candidate-modal .form-control,
+body.dark-mode .candidate-modal .form-select {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+body.dark-mode .candidate-modal .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .candidate-modal .form-control:focus,
+body.dark-mode .candidate-modal .form-select:focus {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.2) !important;
+}
+
+body.dark-mode .candidate-modal-footer {
+  border-color: #334155 !important;
+}
+
+body.dark-mode .modal-close-button {
+  color: #cbd5e1 !important;
+}
+
+
+/* =========================================================
+   MODAL BACKDROP
+   ========================================================= */
+
+body.dark-mode .candidate-modal-backdrop,
+body.dark-mode .employee-modal-backdrop {
+  background: rgba(2, 6, 23, 0.78) !important;
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+   ========================================================= */
+
+body.dark-mode .login-container {
+  background: #0f172a !important;
+}
+
+body.dark-mode .login-card {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .login-card h1,
+body.dark-mode .login-card h2,
+body.dark-mode .login-card h3,
+body.dark-mode .login-card h4,
+body.dark-mode .login-card h5,
+body.dark-mode .login-card h6 {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .login-card label {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .login-card .text-muted {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .login-card .form-control {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+body.dark-mode .login-card .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+
+/* =========================================================
+   BOOTSTRAP CARDS - GENERAL DARK MODE
+   ========================================================= */
+
+body.dark-mode .card {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+body.dark-mode .card .text-muted {
+  color: #94a3b8 !important;
+}
+
+
+/* =========================================================
+   INPUTS / SELECTS - GENERAL
+   ========================================================= */
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #94a3b8;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-color: #3b82f6;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+body.dark-mode .table {
+  color: #f8fafc;
+}
+
+body.dark-mode .table thead th {
+  color: #f8fafc;
+}
+
+body.dark-mode .table td,
+body.dark-mode .table th {
+  border-color: #334155;
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+  background-color: #273449;
+}
+
+
+/* =========================================================
+   DROPDOWNS
+   ========================================================= */
+
+body.dark-mode .dropdown-panel {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .dropdown-panel .text-muted {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .dropdown-divider {
+  border-color: #334155 !important;
+}

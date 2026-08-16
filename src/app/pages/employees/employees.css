@@ -1,0 +1,335 @@
+.employee-avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #e7f1ff;
+
+  color: #0d6efd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+/* ========================================
+   EMPLOYEE DETAILS MODAL
+======================================== */
+
+.employee-modal-backdrop {
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 1050;
+
+}
+
+
+.employee-modal {
+
+  width: 100%;
+
+  max-width: 700px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: white;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25);
+
+  padding: 30px;
+
+}
+
+
+.employee-modal-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #e9ecef;
+
+}
+
+
+.employee-profile {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid #e9ecef;
+
+}
+
+
+.employee-detail-avatar {
+
+  width: 70px;
+
+  height: 70px;
+
+  min-width: 70px;
+
+  border-radius: 50%;
+
+  background: #e7f1ff;
+
+  color: #0d6efd;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+}
+
+
+.detail-box {
+
+  padding: 16px;
+
+  background: #f8f9fa;
+
+  border-radius: 10px;
+
+}
+
+
+.detail-box small {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+}
+
+
+.employee-modal-footer {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #e9ecef;
+
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+:host-context([data-theme="dark"])
+.employee-modal {
+
+  background: #1f2937;
+
+  color: #f9fafb;
+
+}
+
+
+:host-context([data-theme="dark"])
+.employee-modal-header {
+
+  border-color: #374151;
+
+}
+
+
+:host-context([data-theme="dark"])
+.employee-profile {
+
+  border-color: #374151;
+
+}
+
+
+:host-context([data-theme="dark"])
+.employee-detail-avatar {
+
+  background: #1e3a5f;
+
+  color: #60a5fa;
+
+}
+
+
+:host-context([data-theme="dark"])
+.detail-box {
+
+  background: #111827;
+
+}
+
+
+:host-context([data-theme="dark"])
+.employee-modal-footer {
+
+  border-color: #374151;
+
+}
+
+
+:host-context([data-theme="dark"])
+.employee-modal .text-muted {
+
+  color: #9ca3af !important;
+
+}
+
+.delete-action {
+  color: #dc3545;
+  background: transparent;
+  border: none;
+}
+
+.delete-action:hover {
+  color: #bb2d3b;
+  background: #fff1f2;
+}
+
+/* ========================================
+   EMPLOYEE ACTION BUTTONS
+======================================== */
+
+.action-button {
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+
+  padding: 5px !important;
+  margin: 0 3px;
+
+  font-size: 16px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+/* View */
+
+.view-action {
+  color: #0d6efd !important;
+}
+
+
+/* Edit */
+
+.edit-action {
+  color: #0d6efd !important;
+}
+
+
+/* Delete */
+
+.delete-action {
+  color: #dc3545 !important;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.view-action:hover,
+.edit-action:hover {
+  color: #60a5fa !important;
+  background: transparent !important;
+}
+
+
+.delete-action:hover {
+  color: #f87171 !important;
+  background: transparent !important;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+:host-context(body.dark-mode) .employee-modal {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+:host-context(body.dark-mode) .employee-modal-header {
+  border-color: #374151;
+}
+
+:host-context(body.dark-mode) .employee-profile {
+  border-color: #374151;
+}
+
+:host-context(body.dark-mode) .employee-detail-avatar {
+  background: #1e3a5f;
+  color: #60a5fa;
+}
+
+:host-context(body.dark-mode) .detail-box {
+  background: #111827;
+  color: #f9fafb;
+}
+
+:host-context(body.dark-mode) .detail-box small {
+  color: #9ca3af;
+}
+
+:host-context(body.dark-mode) .detail-box div,
+:host-context(body.dark-mode) .detail-box strong,
+:host-context(body.dark-mode) .detail-box span {
+  color: #f9fafb;
+}
+
+:host-context(body.dark-mode) .employee-modal-footer {
+  border-color: #374151;
+}
+
+:host-context(body.dark-mode) .employee-modal .text-muted {
+  color: #9ca3af !important;
+}

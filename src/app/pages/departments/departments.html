@@ -1,0 +1,222 @@
+<div class="container-fluid">
+
+  <!-- Header -->
+
+  <div class="mb-4">
+
+    <h2 class="fw-bold mb-1">
+      Departments
+    </h2>
+
+    <p class="text-muted mb-0">
+      Overview of your organization's departments
+    </p>
+
+  </div>
+
+
+  <!-- Department Cards -->
+
+  <div class="row g-4 mb-4">
+
+    @for (
+      department of departmentStats;
+      track department.name
+    ) {
+
+      <div class="col-md-6 col-xl-3">
+
+        <div class="card border-0 shadow-sm h-100">
+
+          <div class="card-body">
+
+            <div class="d-flex justify-content-between align-items-start">
+
+              <div>
+
+                <p class="text-muted mb-2">
+                  Department
+                </p>
+
+                <h5 class="fw-bold mb-1">
+                  {{ department.name }}
+                </h5>
+
+                <small class="text-muted">
+                  {{ department.total }} employees
+                </small>
+
+              </div>
+
+              <div class="department-icon">
+
+                <i class="bi bi-building"></i>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+
+  <!-- Department Table -->
+
+  <div class="card border-0 shadow-sm">
+
+    <div class="card-body">
+
+      <div class="mb-4">
+
+        <h5 class="fw-bold mb-1">
+          Department Overview
+        </h5>
+
+        <p class="text-muted mb-0">
+          Employee distribution and status by department
+        </p>
+
+      </div>
+
+
+      <div class="table-responsive">
+
+        <table class="table table-hover align-middle">
+
+          <thead>
+
+            <tr>
+
+              <th>Department</th>
+
+              <th>Total Employees</th>
+
+              <th>Active</th>
+
+              <th>On Leave</th>
+
+              <th>Inactive</th>
+
+              <th>Active Rate</th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            @for (
+              department of departmentStats;
+              track department.name
+            ) {
+
+              <tr>
+
+                <td>
+
+                  <div class="d-flex align-items-center gap-3">
+
+                    <div class="department-icon small-icon">
+
+                      <i class="bi bi-building"></i>
+
+                    </div>
+
+                    <span class="fw-semibold">
+                      {{ department.name }}
+                    </span>
+
+                  </div>
+
+                </td>
+
+
+                <td>
+                  {{ department.total }}
+                </td>
+
+
+                <td>
+
+                  <span class="badge text-bg-success">
+                    {{ department.active }}
+                  </span>
+
+                </td>
+
+
+                <td>
+
+                  <span class="badge text-bg-warning">
+                    {{ department.onLeave }}
+                  </span>
+
+                </td>
+
+
+                <td>
+
+                  <span class="badge text-bg-secondary">
+                    {{ department.inactive }}
+                  </span>
+
+                </td>
+
+
+                <td>
+
+                  <div class="d-flex align-items-center gap-2">
+
+                    <div
+                      class="progress flex-grow-1"
+                      style="height: 8px;"
+                    >
+
+                      <div
+                        class="progress-bar"
+                        [style.width.%]="
+                          department.total > 0
+                            ? (department.active / department.total) * 100
+                            : 0
+                        "
+                      ></div>
+
+                    </div>
+
+                    <small class="text-muted">
+
+                      {{
+                        department.total > 0
+                          ? ((department.active / department.total) * 100).toFixed(0)
+                          : 0
+                      }}%
+
+                    </small>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+            }
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

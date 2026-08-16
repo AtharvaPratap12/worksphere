@@ -1,0 +1,305 @@
+.settings-card {
+  background: white;
+
+  border: 1px solid #e9ecef;
+
+  border-radius: 14px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+.settings-card-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #e9ecef;
+}
+
+
+.settings-icon {
+  width: 44px;
+
+  height: 44px;
+
+  min-width: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e7f1ff;
+
+  color: #0d6efd;
+
+  font-size: 18px;
+}
+
+
+.danger-icon {
+  background: #fff1f2;
+
+  color: #dc3545;
+}
+
+
+/* Settings option */
+
+.settings-option {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 22px;
+}
+
+
+.option-title {
+  font-weight: 600;
+
+  margin-bottom: 4px;
+}
+
+
+.option-description {
+  color: #6c757d;
+
+  font-size: 14px;
+}
+
+
+/* Toggle */
+
+.theme-switch {
+  width: 48px;
+
+  height: 26px;
+
+  min-width: 48px;
+
+  padding: 3px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #adb5bd;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+
+.theme-switch span {
+  display: block;
+
+  width: 20px;
+
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  transition: transform 0.2s ease;
+}
+
+
+.theme-switch.enabled {
+  background: #0d6efd;
+}
+
+
+.theme-switch.enabled span {
+  transform: translateX(22px);
+}
+
+
+/* Account */
+
+.account-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #e9ecef;
+}
+
+
+.account-avatar {
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #0d6efd;
+
+  color: white;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+
+.account-detail {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #f1f3f5;
+
+  font-size: 14px;
+}
+
+
+.account-detail:last-child {
+  border-bottom: none;
+}
+
+
+.account-detail span {
+  color: #6c757d;
+}
+
+
+/* About */
+
+.about-content {
+  text-align: center;
+
+  padding-top: 22px;
+}
+
+
+.worksphere-mini-logo {
+  width: 55px;
+
+  height: 55px;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #0d6efd;
+
+  color: white;
+
+  font-size: 24px;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+:host-context([data-theme="dark"]) .settings-card {
+  background: #1f2937;
+
+  border-color: #374151;
+
+  color: #f9fafb;
+}
+
+
+:host-context([data-theme="dark"]) .settings-card-header {
+  border-color: #374151;
+}
+
+
+:host-context([data-theme="dark"]) .settings-option {
+  color: #f9fafb;
+}
+
+
+:host-context([data-theme="dark"]) .option-description {
+  color: #9ca3af;
+}
+
+
+:host-context([data-theme="dark"]) .settings-card .text-muted {
+  color: #9ca3af !important;
+}
+
+
+:host-context([data-theme="dark"]) .account-profile {
+  border-color: #374151;
+}
+
+
+:host-context([data-theme="dark"]) .account-detail {
+  border-color: #374151;
+}
+
+
+:host-context([data-theme="dark"]) .account-detail span {
+  color: #9ca3af;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 576px) {
+
+  .settings-card {
+    padding: 18px;
+  }
+
+
+  .settings-option {
+    align-items: flex-start;
+  }
+
+
+  .option-description {
+    max-width: 220px;
+  }
+
+
+  .account-detail {
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+}

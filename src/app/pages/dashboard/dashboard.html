@@ -1,0 +1,307 @@
+<div class="container-fluid p-4">
+
+  <div class="mb-4">
+    <h2 class="fw-bold">Dashboard</h2>
+    <p class="text-muted">Welcome to Employee Management Portal</p>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Total Employees -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="text-muted mb-1">Total Employees</p>
+              <h2 class="fw-bold mb-0">{{ totalEmployees }}</h2>
+            </div>
+
+            <div class="fs-1 text-primary">
+              <i class="bi bi-people-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Employees -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="text-muted mb-1">Active Employees</p>
+              <h2 class="fw-bold mb-0">{{ activeEmployees }}</h2>
+            </div>
+
+            <div class="fs-1 text-success">
+              <i class="bi bi-person-check-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Departments -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="text-muted mb-1">Departments</p>
+              <h2 class="fw-bold mb-0">{{ departments }}</h2>
+            </div>
+
+            <div class="fs-1 text-warning">
+              <i class="bi bi-building-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Hires -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="text-muted mb-1">New Hires</p>
+              <h2 class="fw-bold mb-0">{{ newHires }}</h2>
+            </div>
+
+            <div class="fs-1 text-info">
+              <i class="bi bi-person-plus-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Recent Employees -->
+
+  <div class="card border-0 shadow-sm mt-4">
+
+    <div class="card-body">
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+
+        <div>
+          <h5 class="fw-bold mb-1">Recent Employees</h5>
+          <p class="text-muted mb-0">
+            Recently added employees
+          </p>
+        </div>
+
+        <button class="btn btn-primary"  routerLink = '/add-employee'>
+          <i class="bi bi-plus-lg"></i>
+          Add Employee
+        </button>
+
+      </div>
+
+      <div class="row g-4 mt-1">
+
+  <!-- Department Distribution -->
+
+  <div class="col-lg-7">
+
+    <div class="card border-0 shadow-sm h-100">
+
+      <div class="card-body p-4">
+
+        <div class="mb-4">
+
+          <h5 class="fw-bold mb-1">
+            Employees by Department
+          </h5>
+
+          <p class="text-muted mb-0">
+            Distribution of employees across departments
+          </p>
+
+        </div>
+
+
+        @for (
+          department of departmentStats;
+          track department.name
+        ) {
+
+          <div class="mb-4">
+
+            <div class="d-flex justify-content-between mb-2">
+
+              <span class="fw-semibold">
+                {{ department.name }}
+              </span>
+
+              <span class="text-muted">
+                {{ department.count }}
+              </span>
+
+            </div>
+
+
+            <div class="progress" style="height: 10px;">
+
+              <div
+                class="progress-bar"
+                role="progressbar"
+                [style.width.%]="
+                  (department.count / totalEmployees) * 100
+                "
+              ></div>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Employee Status -->
+
+  <div class="col-lg-5">
+
+    <div class="card border-0 shadow-sm h-100">
+
+      <div class="card-body p-4">
+
+        <div class="mb-4">
+
+          <h5 class="fw-bold mb-1">
+            Employee Status
+          </h5>
+
+          <p class="text-muted mb-0">
+            Current workforce status
+          </p>
+
+        </div>
+
+
+        @for (
+          status of statusStats;
+          track status.name
+        ) {
+
+          <div class="status-row">
+
+            <div class="d-flex align-items-center gap-3">
+
+              <div
+                class="status-dot"
+                [class.active]="status.name === 'Active'"
+                [class.leave]="status.name === 'On Leave'"
+                [class.inactive]="status.name === 'Inactive'"
+              ></div>
+
+              <span>
+                {{ status.name }}
+              </span>
+
+            </div>
+
+            <strong>
+              {{ status.count }}
+            </strong>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<br>
+
+      <div class="table-responsive">
+
+        <table class="table table-hover align-middle">
+
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Position</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            @for (employee of recentEmployees; track employee.id) {
+            <tr>
+              <td>
+                <div class="fw-semibold" >
+                  {{ employee.name }}
+                </div>
+              </td>
+
+              <td>
+                {{ employee.department }}
+              </td>
+
+              <td>
+                {{ employee.position }}
+              </td>
+
+              <td>
+
+                <span
+                  class="badge"
+                  [class.text-bg-success]="employee.status === 'Active'"
+                  [class.text-bg-warning]="employee.status === 'On Leave'"
+                  [class.text-bg-secondary]="employee.status === 'Inactive'"
+                >
+                  {{ employee.status }}
+                  
+                </span>
+
+              </td>
+            </tr>
+
+          }
+
+          @if (recentEmployees.length === 0) {
+
+            <tr>
+
+              <td
+                colspan="4"
+                class="text-center text-muted py-4"
+              >
+                No employees found.
+              </td>
+
+            </tr>
+
+          }
+
+          </tbody>
+
+        </table>
+
+        
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

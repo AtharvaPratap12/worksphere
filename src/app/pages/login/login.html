@@ -1,0 +1,175 @@
+<div class="login-page">
+
+  <div class="login-card">
+
+    <!-- Logo -->
+
+    <div class="text-center mb-4">
+
+      <div class="login-logo">
+
+        <i class="bi bi-briefcase-fill"></i>
+
+      </div>
+
+      <h2 class="fw-bold mt-3 mb-1">
+        Welcome to WorkSphere
+      </h2>
+
+      <p class="text-muted">
+        Sign in to manage your workforce
+      </p>
+
+    </div>
+
+
+    <!-- Error -->
+
+    @if (loginError) {
+
+      <div class="alert alert-danger">
+
+        <i class="bi bi-exclamation-circle me-2"></i>
+
+        {{ loginError }}
+
+      </div>
+
+    }
+
+
+    <!-- Form -->
+
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="submitLogin()"
+    >
+
+      <!-- Email -->
+
+      <div class="mb-3">
+
+        <label class="form-label fw-semibold">
+          Email
+        </label>
+
+        <input
+          type="email"
+          class="form-control form-control-lg"
+          placeholder="admin@worksphere.com"
+          formControlName="email"
+        >
+
+        @if (
+          loginForm.controls['email'].touched &&
+          loginForm.controls['email'].invalid
+        ) {
+
+          <small class="text-danger">
+
+            @if (
+              loginForm.controls['email'].errors?.['required']
+            ) {
+              Email is required.
+            }
+
+            @if (
+              loginForm.controls['email'].errors?.['email']
+            ) {
+              Enter a valid email.
+            }
+
+          </small>
+
+        }
+
+      </div>
+
+
+      <!-- Password -->
+
+      <div class="mb-4">
+
+        <label class="form-label fw-semibold">
+          Password
+        </label>
+
+        <div class="input-group">
+
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            class="form-control form-control-lg"
+            placeholder="Enter your password"
+            formControlName="password"
+          >
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="togglePassword()"
+          >
+
+            <i
+              [class]="
+                showPassword
+                  ? 'bi bi-eye-slash'
+                  : 'bi bi-eye'
+              "
+            ></i>
+
+          </button>
+
+        </div>
+
+        @if (
+          loginForm.controls['password'].touched &&
+          loginForm.controls['password'].invalid
+        ) {
+
+          <small class="text-danger">
+
+            Password must contain at least
+            6 characters.
+
+          </small>
+
+        }
+
+      </div>
+
+
+      <!-- Login -->
+
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg w-100"
+      >
+
+        <i class="bi bi-box-arrow-in-right me-2"></i>
+
+        Sign In
+
+      </button>
+
+    </form>
+
+
+    <!-- Demo credentials -->
+
+    <div class="demo-box mt-4">
+
+      <small class="text-muted">
+
+        <strong>Demo Login</strong><br>
+
+        Email: admin@worksphere.com<br>
+
+        Password: admin123
+
+      </small>
+
+    </div>
+
+  </div>
+
+</div>

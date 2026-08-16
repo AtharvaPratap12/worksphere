@@ -1,0 +1,333 @@
+<div class="container-fluid">
+
+  <!-- Header -->
+
+  <div class="mb-4">
+
+    <h2 class="fw-bold mb-1">
+      Settings
+    </h2>
+
+    <p class="text-muted mb-0">
+      Manage your WorkSphere preferences
+    </p>
+
+  </div>
+
+
+  <div class="row g-4">
+
+
+    <!-- Appearance -->
+
+    <div class="col-lg-8">
+
+      <div class="settings-card">
+
+        <div class="settings-card-header">
+
+          <div class="settings-icon">
+            <i class="bi bi-palette-fill"></i>
+          </div>
+
+          <div>
+
+            <h5 class="fw-bold mb-1">
+              Appearance
+            </h5>
+
+            <p class="text-muted mb-0">
+              Customize how WorkSphere looks
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="settings-option">
+
+          <div class="option-info">
+
+            <div class="option-title">
+              Dark Mode
+            </div>
+
+            <div class="option-description">
+              Use a darker color scheme across the application
+            </div>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="theme-switch"
+            [class.enabled]="isDarkMode"
+            (click)="toggleTheme()"
+            [attr.aria-label]="
+              isDarkMode
+                ? 'Disable dark mode'
+                : 'Enable dark mode'
+            "
+          >
+
+            <span></span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Notifications -->
+
+      <div class="settings-card mt-4">
+
+        <div class="settings-card-header">
+
+          <div class="settings-icon">
+            <i class="bi bi-bell-fill"></i>
+          </div>
+
+          <div>
+
+            <h5 class="fw-bold mb-1">
+              Notifications
+            </h5>
+
+            <p class="text-muted mb-0">
+              Control application notifications
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="settings-option">
+
+          <div class="option-info">
+
+            <div class="option-title">
+              Enable Notifications
+            </div>
+
+            <div class="option-description">
+              Receive updates about employee and recruitment activity
+            </div>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="theme-switch"
+            [class.enabled]="notificationsEnabled"
+            (click)="toggleNotifications()"
+            [attr.aria-label]="
+              notificationsEnabled
+                ? 'Disable notifications'
+                : 'Enable notifications'
+            "
+          >
+
+            <span></span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Data Management -->
+
+      <div class="settings-card mt-4">
+
+        <div class="settings-card-header">
+
+          <div class="settings-icon danger-icon">
+            <i class="bi bi-database-fill"></i>
+          </div>
+
+          <div>
+
+            <h5 class="fw-bold mb-1">
+              Data Management
+            </h5>
+
+            <p class="text-muted mb-0">
+              Manage locally stored WorkSphere data
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="settings-option">
+
+          <div class="option-info">
+
+            <div class="option-title">
+              Clear Demo Data
+            </div>
+
+            <div class="option-description">
+              Remove all locally stored employees and candidates
+            </div>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="btn btn-outline-danger"
+            (click)="clearDemoData()"
+          >
+
+            <i class="bi bi-trash me-2"></i>
+
+            Clear Data
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Account -->
+
+    <div class="col-lg-4">
+
+      <div class="settings-card">
+
+        <div class="settings-card-header">
+
+          <div class="settings-icon">
+            <i class="bi bi-person-fill"></i>
+          </div>
+
+          <div>
+
+            <h5 class="fw-bold mb-1">
+              Account
+            </h5>
+
+            <p class="text-muted mb-0">
+              Current administrator
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="account-profile">
+
+          <div class="account-avatar">
+            A
+          </div>
+
+          <div>
+
+            <h6 class="fw-bold mb-1">
+              Atharva
+            </h6>
+
+            <p class="text-muted mb-0">
+              Administrator
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="account-detail">
+
+          <span>
+            Email
+          </span>
+
+          <strong>
+            admin@worksphere.com
+          </strong>
+
+        </div>
+
+
+        <div class="account-detail">
+
+          <span>
+            Role
+          </span>
+
+          <strong>
+            Administrator
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- About -->
+
+      <div class="settings-card mt-4">
+
+        <div class="settings-card-header">
+
+          <div class="settings-icon">
+            <i class="bi bi-info-circle-fill"></i>
+          </div>
+
+          <div>
+
+            <h5 class="fw-bold mb-1">
+              About WorkSphere
+            </h5>
+
+            <p class="text-muted mb-0">
+              Application information
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+          <div class="worksphere-mini-logo">
+
+            <i class="bi bi-briefcase-fill"></i>
+
+          </div>
+
+          <h6 class="fw-bold">
+            WorkSphere
+          </h6>
+
+          <p class="text-muted small mb-2">
+            Employee & Recruitment Management Portal
+          </p>
+
+          <span class="badge text-bg-primary">
+            Angular 22
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
