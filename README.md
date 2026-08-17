@@ -104,6 +104,54 @@ Password: admin123
 
 ---
 
+## 🖼️ Screenshots
+
+### 🔐 Login
+
+![WorkSphere Login](screenshots/Lightmode_screenshots/login.png)
+
+---
+
+### 📊 Dashboard
+
+![WorkSphere Dashboard](screenshots/Lightmode_screenshots/dashboard.png)
+
+---
+
+### 👥 Employee Management
+
+![WorkSphere Employees](screenshots/Lightmode_screenshots/employees.png)
+
+---
+
+### 💼 Recruitment
+
+![WorkSphere Recruitment](screenshots/Lightmode_screenshots/recruitment.png)
+
+---
+
+### 🏢 Departments
+
+![WorkSphere Departments](screenshots/Lightmode_screenshots/departments.png)
+
+---
+
+## 🌙 Dark Mode
+
+### 📊 Dashboard
+
+![WorkSphere Dark Mode Dashboard](screenshots/Darkmode_screenshots/darkmode_dashboard.png)
+
+### 👥 Employees
+
+![WorkSphere Dark Mode Employees](screenshots/Darkmode_screenshots/darkmode_employees.png)
+
+### ⚙️ Settings
+
+![WorkSphere Dark Mode Settings](screenshots/Darkmode_screenshots/darkmode_settings.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
