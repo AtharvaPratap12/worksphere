@@ -108,31 +108,23 @@ Password: admin123
 
 ### 🔐 Login
 
-![WorkSphere Login](screenshots/Lightmode_screenshots/login.png)
-
----
+![Login](screenshots/Lightmode_screenshots/login.png)
 
 ### 📊 Dashboard
 
-![WorkSphere Dashboard](screenshots/Lightmode_screenshots/dashboard.png)
-
----
+![Dashboard](screenshots/Lightmode_screenshots/dashboard.png)
 
 ### 👥 Employee Management
 
-![WorkSphere Employees](screenshots/Lightmode_screenshots/employees.png)
-
----
+![Employee Management](screenshots/Lightmode_screenshots/employees.png)
 
 ### 💼 Recruitment
 
-![WorkSphere Recruitment](screenshots/Lightmode_screenshots/recruitment.png)
-
----
+![Recruitment](screenshots/Lightmode_screenshots/recruitment.png)
 
 ### 🏢 Departments
 
-![WorkSphere Departments](screenshots/Lightmode_screenshots/departments.png)
+![Departments](screenshots/Lightmode_screenshots/departments.png)
 
 ---
 
@@ -140,16 +132,15 @@ Password: admin123
 
 ### 📊 Dashboard
 
-![WorkSphere Dark Mode Dashboard](screenshots/Darkmode_screenshots/darkmode_dashboard.png)
+![Dark Mode Dashboard](screenshots/Darkmode_screenshots/darkmode_dashboard.png)
 
 ### 👥 Employees
 
-![WorkSphere Dark Mode Employees](screenshots/Darkmode_screenshots/darkmode_employees.png)
+![Dark Mode Employees](screenshots/Darkmode_screenshots/darkmode_employees.png)
 
 ### ⚙️ Settings
 
-![WorkSphere Dark Mode Settings](screenshots/Darkmode_screenshots/darkmode_settings.png)
-
+![Dark Mode Settings](screenshots/Darkmode_screenshots/darkmode_settings.png)
 ---
 
 ## 🛠️ Tech Stack
